@@ -13,5 +13,15 @@ namespace MissionsApp1
         {
             InitializeComponent();
         }
+
+        private void LoginButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new LoginPage());
+        }
+
+        private void CreateUserButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new CreateUserPage());
+        }
     }
 }
