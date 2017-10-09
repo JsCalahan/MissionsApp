@@ -8,7 +8,23 @@ namespace MissionsApp1.Classes
 {
     class Missions
     {
+        public string ID { get; set; }
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string ZipCode { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public string Date { get; set; }
+        public void SetDate()
+        {
 
+        }
+        public void SetTime()
+        {
+
+        }
 
     }
 }
