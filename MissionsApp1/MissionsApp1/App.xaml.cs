@@ -13,7 +13,7 @@ namespace MissionsApp1
         {
             InitializeComponent();
 
-            MainPage = new MissionsApp1.MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
