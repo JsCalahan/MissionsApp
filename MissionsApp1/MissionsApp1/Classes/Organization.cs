@@ -8,5 +8,6 @@ namespace MissionsApp1.Classes
 {
     class Organization
     {
+
     }
 }
