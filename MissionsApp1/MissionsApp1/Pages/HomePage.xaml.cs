@@ -16,5 +16,15 @@ namespace MissionsApp1.Pages
         {
             InitializeComponent();
         }
+
+        private void AccountPage_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AccountPage());
+        }
+
+        private void OrganizationSearch_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new OrganizationSearchPage());
+        }
     }
 }

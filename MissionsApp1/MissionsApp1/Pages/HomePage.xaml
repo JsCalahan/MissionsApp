@@ -4,7 +4,28 @@
              x:Class="MissionsApp1.Pages.HomePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="AccountPage"
+                        Text="Account Page"
+                        Clicked="AccountPage_Clicked"
+                        Grid.Row="0"
+                        Grid.Column="0"/>
+
+                <Button x:Name="OrganizationSearch"
+                        Text="Search for an Organization"
+                        Clicked="OrganizationSearch_Clicked"
+                        Grid.Row="0"
+                        Grid.Column="1"/>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
