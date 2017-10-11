@@ -4,7 +4,7 @@
              x:Class="MissionsApp1.Pages.LoginPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="This is the login page." />
+            <Label Text="Welcome to Xamarin Forms!" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
