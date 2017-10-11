@@ -4,7 +4,13 @@
              x:Class="MissionsApp1.Pages.OrganizationSearchPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
+            
+    
+            <Label Text="Search for organizations" />
+
+            <Image Source="http://static.adweek.com/adweek.com-prod/wp-content/uploads/sites/2/2015/11/Google-Maps.png"/>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
