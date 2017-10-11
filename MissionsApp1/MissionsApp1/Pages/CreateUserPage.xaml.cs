@@ -16,5 +16,10 @@ namespace MissionsApp1.Pages
         {
             InitializeComponent();
         }
+
+        /*private void CreateAccount_Clicked(object sender, EventArgs e)
+        {
+            
+        }*/
     }
 }

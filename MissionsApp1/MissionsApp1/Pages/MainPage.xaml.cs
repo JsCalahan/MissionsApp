@@ -17,11 +17,11 @@ namespace MissionsApp1
 
         private void LoginButton_Clicked(object sender, EventArgs e)
         {
-           // Navigation.PushAsync(new LoginPage());
+           Navigation.PushAsync(new LoginPage());
         }
         private void CreateUserButton_Clicked(object sender, EventArgs e)
         {
-            //Navigation.PushAsync(new CreateUserPage());
+            Navigation.PushAsync(new CreateUserPage());
         }
     }
 }
