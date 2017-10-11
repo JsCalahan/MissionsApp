@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace MissionsApp1.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LoginPage : ContentPage
+    public partial class HomePage : ContentPage
     {
-        public LoginPage()
+        public HomePage()
         {
             InitializeComponent();
-        }
-
-        private void Login_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new HomePage());
         }
     }
 }

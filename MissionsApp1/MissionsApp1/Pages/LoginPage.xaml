@@ -4,7 +4,14 @@
              x:Class="MissionsApp1.Pages.LoginPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin Forms!" />
+            <Label Text="Enter your User Information"/>
+            <Entry x:Name="Username"
+                       Placeholder="Username"/>
+            <Entry x:Name="Password"
+                       Placeholder="Password"/>
+            <Button x:Name="Login"
+                    Text="Login"
+                    Clicked="Login_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
