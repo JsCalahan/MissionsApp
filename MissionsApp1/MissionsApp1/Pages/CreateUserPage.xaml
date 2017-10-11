@@ -17,8 +17,12 @@
                        Placeholder="Last Name"/>
                 <Entry x:Name="EmailEntry"
                        Placeholder="Email Address"/>
-                
-                
+
+                <Button x:Name="CreateAccount"
+                        Text="Create Account"
+                        Clicked="CreateAccount_Clicked"/>
+
+
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
