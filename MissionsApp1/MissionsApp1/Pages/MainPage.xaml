@@ -12,7 +12,7 @@
                VerticalOptions="Center"/>
 
         <Button x:Name="LoginButton"
-            Text="Create New User"
+            Text="Login"
             VerticalOptions="Center"
             HorizontalOptions="Center"
             Clicked="LoginButton_Clicked"/>
