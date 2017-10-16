@@ -19,7 +19,7 @@ namespace MissionsApp1.Pages
 
         private void CreateAccount_Clicked(object sender, EventArgs e)
         {
-            
+            Navigation.PushAsync(new HomePage());
         }
     }
 }
