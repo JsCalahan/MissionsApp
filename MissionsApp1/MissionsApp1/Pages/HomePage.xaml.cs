@@ -17,14 +17,20 @@ namespace MissionsApp1.Pages
             InitializeComponent();
         }
 
-        private void AccountPage_Clicked(object sender, EventArgs e)
+        private void AccountPage_Tapped(object sender, EventArgs e)
         {
             Navigation.PushAsync(new AccountPage());
         }
 
-        private void OrganizationSearch_Clicked(object sender, EventArgs e)
+        private void OrganizationSearch_Tapped(object sender, EventArgs e)
         {
             Navigation.PushAsync(new OrganizationSearchPage());
         }
+
+        private void Calendar_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new EventsPage());
+        }
+
     }
 }
