@@ -6,7 +6,10 @@
         <StackLayout>
             <Grid>
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="10"/> <!--Spacer Row-->
+                    <RowDefinition Height="30"/>
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -14,17 +17,55 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Button x:Name="AccountPage"
-                        Text="Account Page"
-                        Clicked="AccountPage_Clicked"
-                        Grid.Row="0"
-                        Grid.Column="0"/>
+                <Label Text="Calendar"
+                       HorizontalOptions="Center"
+                       FontAttributes="Bold"
+                       FontSize="24"
+                       Grid.Row="0"
+                       Grid.Column="0"/>
 
-                <Button x:Name="OrganizationSearch"
-                        Text="Search for an Organization"
-                        Clicked="OrganizationSearch_Clicked"
-                        Grid.Row="0"
-                        Grid.Column="1"/>
+                <Image x:Name="CalendarImage"
+                       Source="calendar.png"
+                       Grid.Row="1"
+                       Grid.Column="0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Calendar_Tapped" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Label Text="Account"
+                       HorizontalOptions="Center"
+                       FontAttributes="Bold"
+                       FontSize="24"
+                       Grid.Row="0"
+                       Grid.Column="1"/>
+
+                <Image x:Name="AccountImage"
+                       Source="account.png"
+                       Grid.Row="1"
+                       Grid.Column="1">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="AccountPage_Tapped" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Label Text="Search"
+                       HorizontalOptions="Center"
+                       FontAttributes="Bold"
+                       FontSize="24"
+                       Grid.Row="3"
+                       Grid.Column="0"/>
+
+                <Image x:Name="OrganizationSearch"
+                       Source="map.png"
+                       Grid.Row="4"
+                       Grid.Column="0">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OrganizationSearch_Tapped" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+
             </Grid>
         </StackLayout>
     </ContentPage.Content>
