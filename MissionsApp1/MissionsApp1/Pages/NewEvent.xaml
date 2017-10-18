@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MissionsApp1.Pages.NewEvent">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Create a New Event"
+                   Font="24"
+                   TextColor="AliceBlue"/>
+
+            <Entry x:Name="EventName"
+                       Placeholder="Event Name"/>
+            <Entry x:Name="EventAddress"
+                       Placeholder="Address of Event"/>
+            <Entry x:Name="EventDate"
+                       Placeholder="Date of Event"/>
+            <Entry x:Name="EventStartTime"
+                       Placeholder="Time Event Starts"/>
+            <Entry x:Name="EventEndTime"
+                       Placeholder="Time Event Ends"/>
+
+            <Button x:Name="CreateEvent"
+                    Text="Create Event"
+                    HorizontalOptions="Center"
+                    Clicked="CreateEvent_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
