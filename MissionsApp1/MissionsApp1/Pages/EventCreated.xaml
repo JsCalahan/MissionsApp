@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MissionsApp1.Pages.EventCreated">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="You've just created your event!  This button will take you back to your homepage." />
+
+            <Button x:Name="BackToHome"
+                    Text="HomePage"
+                    Clicked="BackToHome_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

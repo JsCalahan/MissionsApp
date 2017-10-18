@@ -27,10 +27,14 @@ namespace MissionsApp1.Pages
             Navigation.PushAsync(new OrganizationSearchPage());
         }
 
-        private void Calendar_Tapped(object sender, EventArgs e)
+        private void Event_Tapped(object sender, EventArgs e)
         {
             Navigation.PushAsync(new EventsPage());
         }
 
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new NewEvent());
+        }
     }
 }

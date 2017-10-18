@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MissionsApp1.Pages.HomePage">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout VerticalOptions="Center">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"/>
@@ -17,7 +17,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Text="Calendar"
+                <Label Text="Events"
                        HorizontalOptions="Center"
                        FontAttributes="Bold"
                        FontSize="24"
@@ -29,7 +29,7 @@
                        Grid.Row="1"
                        Grid.Column="0">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Calendar_Tapped" NumberOfTapsRequired="1"/>
+                        <TapGestureRecognizer Tapped="Event_Tapped" NumberOfTapsRequired="1"/>
                     </Image.GestureRecognizers>
                 </Image>
 
@@ -62,6 +62,22 @@
                        Grid.Column="0">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OrganizationSearch_Tapped" NumberOfTapsRequired="1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Label Text="New Event"
+                       HorizontalOptions="Center"
+                       FontAttributes="Bold"
+                       FontSize="24"
+                       Grid.Row="3"
+                       Grid.Column="1"/>
+
+                <Image x:Name="NewEvent"
+                       Source="newevent.png"
+                       Grid.Row="4"
+                       Grid.Column="1">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
                     </Image.GestureRecognizers>
                 </Image>
 
