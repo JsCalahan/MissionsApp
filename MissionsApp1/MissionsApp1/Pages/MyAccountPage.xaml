@@ -4,55 +4,7 @@
              x:Class="MissionsApp1.Pages.MyAccountPage">
     <ContentPage.Content>
         <StackLayout>
-
-            <Label Text="Welcome to your account page" />
-
-            <!--<Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>-->
-
-            <!--</Grid>-->
-
-            <Image x:Name="PPIMage"
-                   Source="http://2t2ine2n47g337am722tf6ek.wpengine.netdna-cdn.com/wp-content/uploads/2016/12/people-profile-placeholder2-600x600.jpg"
-                   HorizontalOptions="Center"/>
-
-            <Label x:Name="ProfileNameLabel"
-                   Text="John Doe"
-                   HorizontalOptions="Center"/>
-
-            <Entry x:Name="NewMissionEntry" Placeholder="Enter a new mission"/>
-            <Button x:Name="AddMissionButton" Text="Add Mission" Clicked="AddMissionButton_Clicked"/>
-
-            <Label Text="Missions"
-                   Font="20"
-                   TextColor="Black"
-                   HorizontalOptions="Center"/>
-
-            <ListView x:Name="UserEventListView"
-                      HeightRequest="400"
-                      Header="Missions"
-                      HorizontalOptions="Center">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Padding="15,0">
-                                <Label Text="{Binding .}" />
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-
+            <Label Text="Welcome to Xamarin Forms!" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

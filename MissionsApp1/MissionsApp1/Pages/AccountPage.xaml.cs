@@ -24,16 +24,16 @@ namespace MissionsApp1.Pages
 
         private void AddMissionButton_Clicked(object sender, EventArgs e)
         {
-            //if (String.IsNullOrEmpty(NewMissionEntry.Text))
-            //{
-            //    DisplayAlert("Error", "Entry is empty.", "Ok");
-            //}
-            //else
-            //{
-            //    this.Missions.Add(NewMissionEntry.Text);
-            //    UserEventListView.ItemsSource = this.Missions;
-            //    NewMissionsEntry.Text = "";
-            //}
+            if (String.IsNullOrEmpty(NewMissionEntry.Text))
+            {
+                DisplayAlert("Error", "Entry is empty.", "Ok");
+            }
+            else
+            {
+                this.Missions.Add(NewMissionEntry.Text);
+                UserEventListView.ItemsSource = this.Missions;
+                NewMissionsEntry.Text = "";
+            }
         }
     }
 }

@@ -6,21 +6,6 @@
         <StackLayout>
 
             <Label Text="Welcome to your account page" />
-  
-            <!--<Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>-->
-
-            <!--</Grid>-->
 
             <Image x:Name="PPIMage"
                    Source="http://2t2ine2n47g337am722tf6ek.wpengine.netdna-cdn.com/wp-content/uploads/2016/12/people-profile-placeholder2-600x600.jpg"
@@ -30,7 +15,7 @@
                    Text="John Doe"
                    HorizontalOptions="Center"/>
 
-            <!--<Entry x:Name="NewMissionEntry" Placeholder="Enter a new mission"/>-->
+            <Entry x:Name="NewMissionEntry" Placeholder="Enter a new mission"/>-->
             <Button x:Name="AddMissionButton" Text="Add Mission" Clicked="AddMissionButton_Clicked"/>
             
             <Label Text="Missions"
@@ -38,7 +23,7 @@
                    TextColor="Black"
                    HorizontalOptions="Center"/>
 
-            <!--<ListView x:Name="UserEventListView"
+            <ListView x:Name="UserEventListView"
                       HeightRequest="400"
                       Header="Missions"
                       HorizontalOptions="Center">
@@ -51,7 +36,7 @@
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-            </ListView>-->
+            </ListView>
 
         </StackLayout>
     </ContentPage.Content>
