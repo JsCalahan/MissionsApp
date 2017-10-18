@@ -11,11 +11,10 @@ using Xamarin.Forms.Xaml;
 namespace MissionsApp1.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class AccountPage : ContentPage
+    public partial class MyAccountPage : ContentPage
     {
-
         public ObservableCollection<string> Missions { get; set; }
-        public AccountPage()
+        public MyAccountPage()
         {
             InitializeComponent();
 
@@ -24,16 +23,16 @@ namespace MissionsApp1.Pages
 
         private void AddMissionButton_Clicked(object sender, EventArgs e)
         {
-            //if (String.IsNullOrEmpty(NewMissionEntry.Text))
-            //{
-            //    DisplayAlert("Error", "Entry is empty.", "Ok");
-            //}
-            //else
-            //{
-            //    this.Missions.Add(NewMissionEntry.Text);
-            //    UserEventListView.ItemsSource = this.Missions;
-            //    NewMissionsEntry.Text = "";
-            //}
+            if (String.IsNullOrEmpty(NewMissionEntry.Text))
+            {
+                DisplayAlert("Error", "Entry is empty.", "Ok");
+            }
+            else
+            {
+                this.Missions.Add(NewMissionEntry.Text);
+                UserEventListView.ItemsSource = this.Missions;
+                NewMissionEntry.Text = "";
+            }
         }
     }
 }
