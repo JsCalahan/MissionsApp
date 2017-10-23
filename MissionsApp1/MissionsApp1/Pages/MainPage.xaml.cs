@@ -23,5 +23,10 @@ namespace MissionsApp1
         {
             Navigation.PushAsync(new CreateUserPage());
         }
+
+        private void CreateOrganizationButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new CreateOrganizationPage());
+        }
     }
 }

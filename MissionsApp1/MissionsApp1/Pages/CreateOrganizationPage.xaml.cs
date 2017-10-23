@@ -10,14 +10,14 @@ using Xamarin.Forms.Xaml;
 namespace MissionsApp1.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CreateUserPage : ContentPage
+    public partial class CreateOrganizationPage : ContentPage
     {
-        public CreateUserPage()
+        public CreateOrganizationPage()
         {
             InitializeComponent();
         }
 
-        private void CreateUserAccount_Clicked(object sender, EventArgs e)
+        private void CreateOrganizationAccount_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new HomePage());
         }

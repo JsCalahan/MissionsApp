@@ -18,9 +18,9 @@
                 <Entry x:Name="EmailEntry"
                        Placeholder="Email Address"/>
 
-                <Button x:Name="CreateAccount"
+                <Button x:Name="CreateUserAccount"
                         Text="Create Account"
-                        Clicked="CreateAccount_Clicked"/>
+                        Clicked="CreateUserAccount_Clicked"/>
 
 
             </StackLayout>

@@ -23,6 +23,12 @@
             HorizontalOptions="Center"
             Clicked="CreateUserButton_Clicked"/>
 
+        <Button x:Name="CreateOrganizationButton"
+            Text="Create New Organization"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Clicked="CreateOrganizationButton_Clicked"/>
+
     </StackLayout>
 
 
