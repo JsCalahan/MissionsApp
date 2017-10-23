@@ -24,7 +24,7 @@
                    HorizontalOptions="Center"/>
 
             <ListView x:Name="UserEventListView"
-                      HeightRequest="400">
+                      HeightRequest="300">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
