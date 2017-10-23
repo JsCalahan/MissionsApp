@@ -33,7 +33,7 @@
                     </Image.GestureRecognizers>
                 </Image>
 
-                <Label Text="Account"
+                <Label Text="My Account"
                        HorizontalOptions="Center"
                        FontAttributes="Bold"
                        FontSize="24"
