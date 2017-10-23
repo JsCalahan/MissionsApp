@@ -17,6 +17,8 @@ namespace MissionsApp1.Classes
         public double Latitude { get; set; }
         public double Longitude { get; set; }
         public string Date { get; set; }
+        public string StartTime { get; set; }
+        public string EndTime { get; set; }
         public void SetDate()
         {
 
