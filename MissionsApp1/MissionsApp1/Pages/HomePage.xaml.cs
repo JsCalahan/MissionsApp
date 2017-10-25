@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using MissionsApp1.Classes;
 
 namespace MissionsApp1.Pages
 {
@@ -15,6 +16,10 @@ namespace MissionsApp1.Pages
         public HomePage()
         {
             InitializeComponent();
+            if(GlobalConfig.isOrganization == false)
+            {
+                Events.IsVisible = false;
+            }
         }
 
         private void AccountPage_Tapped(object sender, EventArgs e)

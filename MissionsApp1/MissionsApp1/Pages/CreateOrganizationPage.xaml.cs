@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using MissionsApp1.Classes;
 
 namespace MissionsApp1.Pages
 {
