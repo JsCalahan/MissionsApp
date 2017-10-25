@@ -2,8 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MissionsApp1.Pages.NewEvent">
+    
     <ContentPage.Content>
         <StackLayout>
+
             <Label Text="Create a New Event"
                    Font="24"
                    TextColor="AliceBlue"/>
@@ -12,6 +14,16 @@
                        Placeholder="Event Name"/>
             <Entry x:Name="EventAddress"
                        Placeholder="Address of Event"/>
+            <Entry x:Name="EventCity"
+                       Placeholder="City of Event"/>
+            <Entry x:Name="EventState"
+                       Placeholder="State of Event"/>
+            <Entry x:Name="EventZipCode"
+                       Placeholder="Zip Code of Event"/>
+            <Entry x:Name="EventLatitude"
+                       Placeholder="Latitude of Event"/>
+            <Entry x:Name="EventLongitude"
+                       Placeholder="Longitude of Event"/>
             <Entry x:Name="EventDate"
                        Placeholder="Date of Event"/>
             <Entry x:Name="EventStartTime"

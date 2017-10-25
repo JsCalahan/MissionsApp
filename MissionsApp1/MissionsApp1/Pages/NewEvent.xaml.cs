@@ -21,13 +21,14 @@ namespace MissionsApp1.Pages
         private void CreateEvent_Clicked(object sender, EventArgs e)
         {
             Missions Mission = new Missions();
+
             Mission.Name = EventName.Text;
             Mission.Address = EventAddress.Text;
-            //Mission.City = EventCity.Text;
-            //Mission.State = EventState.Text;
-            //Mission.ZipCode = EventZipCode.Text;
-            //Mission.Latitude = EventLatitude.Text;
-            //Mission.Longitude = EventLongitude.Text;
+            Mission.City = EventCity.Text;
+            Mission.State = EventState.Text;
+            Mission.ZipCode = EventZipCode.Text;
+            Mission.Latitude = EventLatitude.Text;
+            Mission.Longitude = EventLongitude.Text;
             Mission.Date = EventDate.Text;
             Mission.StartTime = EventStartTime.Text;
             Mission.EndTime = EventEndTime.Text;
