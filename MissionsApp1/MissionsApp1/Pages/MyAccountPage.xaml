@@ -13,6 +13,7 @@
 
             <Label x:Name="ProfileNameLabel"
                    Text="John Doe"
+                   TextColor="Black"
                    HorizontalOptions="Center"/>
 
             <Entry x:Name="NewMissionEntry" Placeholder="Enter a new mission"/>
