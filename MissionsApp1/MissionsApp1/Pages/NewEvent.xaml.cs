@@ -27,8 +27,8 @@ namespace MissionsApp1.Pages
             Mission.City = EventCity.Text;
             Mission.State = EventState.Text;
             Mission.ZipCode = EventZipCode.Text;
-            Mission.Latitude = EventLatitude.Text;
-            Mission.Longitude = EventLongitude.Text;
+            Mission.Latitude = Convert.ToDouble(EventLatitude.Text);
+            Mission.Longitude = Convert.ToDouble(EventLongitude.Text);
             Mission.Date = EventDate.Text;
             Mission.StartTime = EventStartTime.Text;
             Mission.EndTime = EventEndTime.Text;

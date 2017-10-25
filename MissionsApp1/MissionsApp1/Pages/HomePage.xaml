@@ -64,16 +64,16 @@
                         <TapGestureRecognizer Tapped="OrganizationSearch_Tapped" NumberOfTapsRequired="1"/>
                     </Image.GestureRecognizers>
                 </Image>
-
-                <StackLayout x:Name="Events">
-                    <Label Text="New Event"
+                
+                <Label x:Name="NewEventText"
+                       Text="New Event"
                        HorizontalOptions="Center"
                        FontAttributes="Bold"
                        FontSize="24"
                        Grid.Row="3"
                        Grid.Column="1"/>
 
-                <Image x:Name="NewEvent"
+                <Image x:Name="NewEventImage"
                        Source="newevent.png"
                        Grid.Row="4"
                        Grid.Column="1">
@@ -81,8 +81,7 @@
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"/>
                     </Image.GestureRecognizers>
                 </Image>
-                </StackLayout>
-                
+
 
             </Grid>
         </StackLayout>

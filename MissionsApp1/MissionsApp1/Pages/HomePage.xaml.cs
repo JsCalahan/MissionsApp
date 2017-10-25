@@ -16,10 +16,12 @@ namespace MissionsApp1.Pages
         public HomePage()
         {
             InitializeComponent();
-            if(GlobalConfig.isOrganization == false)
+            if (GlobalConfig.isOrganization == false)
             {
-                Events.IsVisible = false;
+                NewEventImage.IsVisible = false;
+                NewEventText.IsVisible = false;
             }
+
         }
 
         private void AccountPage_Tapped(object sender, EventArgs e)

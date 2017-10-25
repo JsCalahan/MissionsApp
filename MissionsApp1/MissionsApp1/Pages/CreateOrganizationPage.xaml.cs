@@ -20,6 +20,7 @@ namespace MissionsApp1.Pages
 
         private void CreateOrganizationAccount_Clicked(object sender, EventArgs e)
         {
+            GlobalConfig.isOrganization = true;
             Navigation.PushAsync(new HomePage());
         }
     }

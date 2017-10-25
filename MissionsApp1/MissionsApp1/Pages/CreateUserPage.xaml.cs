@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using MissionsApp1.Classes;
 
 namespace MissionsApp1.Pages
 {
@@ -19,6 +20,7 @@ namespace MissionsApp1.Pages
 
         private void CreateUserAccount_Clicked(object sender, EventArgs e)
         {
+            GlobalConfig.isOrganization = false;
             Navigation.PushAsync(new HomePage());
         }
     }
