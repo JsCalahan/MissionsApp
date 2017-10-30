@@ -20,7 +20,7 @@ namespace MissionsApp1.Pages
 
         private void CreateEvent_Clicked(object sender, EventArgs e)
         {
-            Missions Mission = new Missions();
+            Mission Mission = new Mission();
 
             Mission.Name = EventName.Text;
             Mission.Address = EventAddress.Text;

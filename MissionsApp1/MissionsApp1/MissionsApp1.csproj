@@ -39,7 +39,7 @@
     <Compile Include="Pages\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Missions.cs" />
+    <Compile Include="Classes\Mission.cs" />
     <Compile Include="Classes\Organization.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Pages\CreateOrganizationPage.xaml.cs">
