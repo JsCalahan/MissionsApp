@@ -18,7 +18,7 @@ namespace MissionsApp1.Pages
             InitializeComponent();
         }
 
-        private void CreateEvent_Clicked(object sender, EventArgs e)
+        private async void CreateEvent_Clicked(object sender, EventArgs e)
         {
             Mission Mission = new Mission();
 
@@ -33,7 +33,20 @@ namespace MissionsApp1.Pages
             Mission.StartTime = EventStartTime.Text;
             Mission.EndTime = EventEndTime.Text;
 
-            Navigation.PushAsync(new EventCreated());
+            await GlobalConfig.MobileService.GetTable<Mission>().InsertAsync(Mission);
+
+            EventName.Text = "";
+            EventAddress.Text = "";
+            EventCity.Text = "";
+            EventState.Text = "";
+            EventZipCode.Text = "";
+            EventLatitude.Text = "";
+            EventLongitude.Text = "";
+            EventDate.Text = "";
+            EventStartTime.Text = "";
+            EventEndTime.Text = "";
+
+            await Navigation.PushAsync(new EventCreated());
         }
     }
 }
