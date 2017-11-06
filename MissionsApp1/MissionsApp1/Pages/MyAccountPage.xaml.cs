@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MissionsApp1.Classes;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -14,7 +15,17 @@ namespace MissionsApp1.Pages
 	public partial class MyAccountPage : ContentPage
 	{
 
-        public ObservableCollection<string> Missions { get; set; }
+        public ObservableCollection<string> Missions; // { get; set; }
+
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            List<Mission> databaseMission = await GlobalConfig.MobileService.GetTable<Mission>().Where(rec => true).ToListAsync;
+            this.Missions = new ObservableCollection<Mission>(databaseMission);
+
+            this.UserEventListView.ItemsSource = this.Missions;
+        }
         public MyAccountPage ()
 		{
 			InitializeComponent ();
