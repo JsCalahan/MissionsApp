@@ -17,6 +17,10 @@
                        Placeholder="Last Name"/>
                 <Entry x:Name="EmailEntry"
                        Placeholder="Email Address"/>
+                <Entry x:Name="PasswordEntry"
+                       Placeholder="Password" IsPassword="true"/>
+                <Entry x:Name="PasswordConfirmation"
+                       Placeholder="Confirm Password" IsPassword="true"/>
 
                 <Button x:Name="CreateUserAccount"
                         Text="Create Account"
