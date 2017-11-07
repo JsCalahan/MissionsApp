@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MissionsApp1.Classes
 {
-    class Mission
+    public class Mission
     {
         public string ID { get; set; }
         public string Name { get; set; }

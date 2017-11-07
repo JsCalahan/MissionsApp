@@ -18,10 +18,23 @@ namespace MissionsApp1.Pages
             InitializeComponent();
         }
 
-        private void CreateUserAccount_Clicked(object sender, EventArgs e)
+        private async void CreateUserAccount_Clicked(object sender, EventArgs e)
         {
+            User user = new User();
+
+            user.Username = UsernameEntry.Text;
+            user.FirstName = FirstNameEntry.Text;
+            user.LastName = LastNameEntry.Text;
+            user.Password = PasswordEntry.Text;
+            user.EmailAddress = EmailEntry.Text;
             GlobalConfig.isOrganization = false;
+
+            await GlobalConfig.MobileService.GetTable<User>().InsertAsync(user);
+
+
             Navigation.PushAsync(new HomePage());
         }
+
+
     }
 }

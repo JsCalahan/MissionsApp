@@ -8,6 +8,7 @@ namespace MissionsApp1.Classes
 {
     class User
     {
+        public string ID { get; set; }
         public string Username { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

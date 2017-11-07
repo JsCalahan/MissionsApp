@@ -20,20 +20,20 @@ namespace MissionsApp1.Pages
 
         private async void CreateEvent_Clicked(object sender, EventArgs e)
         {
-            Mission Mission = new Mission();
+            Mission mission = new Mission();
 
-            Mission.Name = EventName.Text;
-            Mission.Address = EventAddress.Text;
-            Mission.City = EventCity.Text;
-            Mission.State = EventState.Text;
-            Mission.ZipCode = EventZipCode.Text;
-            Mission.Latitude = Convert.ToDouble(EventLatitude.Text);
-            Mission.Longitude = Convert.ToDouble(EventLongitude.Text);
-            Mission.Date = EventDate.Text;
-            Mission.StartTime = EventStartTime.Text;
-            Mission.EndTime = EventEndTime.Text;
+            mission.Name = EventName.Text;
+            mission.Address = EventAddress.Text;
+            mission.City = EventCity.Text;
+            mission.State = EventState.Text;
+            mission.ZipCode = EventZipCode.Text;
+            mission.Latitude = Convert.ToDouble(EventLatitude.Text);
+            mission.Longitude = Convert.ToDouble(EventLongitude.Text);
+            mission.Date = EventDate.Text;
+            mission.StartTime = EventStartTime.Text;
+            mission.EndTime = EventEndTime.Text;
 
-            await GlobalConfig.MobileService.GetTable<Mission>().InsertAsync(Mission);
+            await GlobalConfig.MobileService.GetTable<Mission>().InsertAsync(mission);
 
             EventName.Text = "";
             EventAddress.Text = "";
