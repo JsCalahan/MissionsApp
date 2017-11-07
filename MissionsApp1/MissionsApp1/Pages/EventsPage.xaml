@@ -4,7 +4,8 @@
              x:Class="MissionsApp1.Pages.EventsPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="This is the Events Page" />
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

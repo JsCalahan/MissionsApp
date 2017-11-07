@@ -21,11 +21,11 @@ namespace MissionsApp1.Pages
         {
             base.OnAppearing();
 
-            List<Mission> databaseMission = await GlobalConfig.MobileService.GetTable<Mission>().Where(rec => true).ToListAsync;
-            this.Missions = new ObservableCollection<Mission>(databaseMission);
+            List<Mission> databaseMission = await GlobalConfig.MobileService.GetTable<Mission>().Where(rec => true).ToListAsync();
+            /*this.Missions = new ObservableCollection<Mission>(databaseMission);
 
             this.UserEventListView.ItemsSource = this.Missions;
-        }
+        */}
         public MyAccountPage ()
 		{
 			InitializeComponent ();

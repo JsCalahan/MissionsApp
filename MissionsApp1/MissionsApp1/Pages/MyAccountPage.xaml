@@ -16,9 +16,6 @@
                    TextColor="Black"
                    HorizontalOptions="Center"/>
 
-            <Entry x:Name="NewMissionEntry" Placeholder="Enter a new mission"/>
-            <Button x:Name="AddMissionButton" Text="Add Mission" Clicked="AddMissionButton_Clicked"/>
-
             <Label Text="Missions"
                    Font="20"
                    TextColor="Black"
