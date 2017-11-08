@@ -46,7 +46,7 @@ namespace MissionsApp1.Pages
             EventStartTime.Text = "";
             EventEndTime.Text = "";
 
-            await Navigation.PushAsync(new EventCreated());
+            await Navigation.PushAsync(new EventsPage());
         }
     }
 }

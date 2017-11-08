@@ -5,9 +5,17 @@
              xmlns:local="clr-namespace:MissionsApp1"
              x:Class="MissionsApp1.MainPage">
 
-    <StackLayout>
+    <StackLayout BackgroundColor="MintCream">
 
-        <Label Text="Welcome to Missions for Christians"
+        <Label Text="Welcome to"
+               Font="32"
+               TextColor="DeepSkyBlue"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+        <Label Text="Missions for Christians"
+               Font="32"
+               TextColor="DeepSkyBlue"
                HorizontalOptions="Center"
                VerticalOptions="Center"/>
 

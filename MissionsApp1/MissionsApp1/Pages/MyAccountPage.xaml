@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MissionsApp1.Pages.MyAccountPage">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="MintCream">
 
             <Label Text="Welcome to your account page" />
 
