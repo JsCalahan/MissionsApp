@@ -11,28 +11,17 @@ using Xamarin.Forms.Xaml;
 
 namespace MissionsApp1.Pages
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MyAccountPage : ContentPage
-    {
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class MyAccountPage : ContentPage
+	{
 
-        public ObservableCollection<string> Missions; // { get; set; }
+        public ObservableCollection<string> Missions; 
 
-        protected async override void OnAppearing()
-        {
-            base.OnAppearing();
+        public MyAccountPage ()
+		{
+			InitializeComponent ();
 
-            List<Mission> databaseMission = await GlobalConfig.MobileService.GetTable<Mission>().Where(rec => true).ToListAsync();
-            /*this.Missions = new ObservableCollection<Mission>(databaseMission);
-
-            this.UserEventListView.ItemsSource = this.Missions;
-        */
+            //this.Missions = new ObservableCollection<Mission>();
         }
-        public MyAccountPage()
-        {
-            InitializeComponent();
-
-            this.Missions = new ObservableCollection<string>();
-        }
-
     }
 }

@@ -31,8 +31,13 @@ namespace MissionsApp1.Pages
 
             await GlobalConfig.MobileService.GetTable<User>().InsertAsync(user);
 
+            UsernameEntry.Text = "";
+            FirstNameEntry.Text = "";
+            LastNameEntry.Text = "";
+            PasswordEntry.Text = "";
+            EmailEntry.Text = "";
 
-            Navigation.PushAsync(new HomePage());
+            await Navigation.PushAsync(new HomePage());
         }
 
 
