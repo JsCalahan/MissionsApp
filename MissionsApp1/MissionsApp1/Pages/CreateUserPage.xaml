@@ -20,7 +20,7 @@
                 <Entry x:Name="PasswordEntry"
                        Placeholder="Password" IsPassword="true"/>
                 <Entry x:Name="PasswordConfirmation"
-                       Placeholder="Confirm Password" IsPassword="true"/>
+                       Placeholder="Re-enter Password" IsPassword="true"/>
 
                 <Button x:Name="CreateUserAccount"
                         Text="Create Account"

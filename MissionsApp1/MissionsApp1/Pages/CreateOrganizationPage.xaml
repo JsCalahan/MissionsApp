@@ -3,26 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MissionsApp1.Pages.CreateOrganizationPage">
     <ContentPage.Content>
-        <StackLayout>
+        <ScrollView>
+            <StackLayout>
 
-            <Label Text="Create an Organization account"/>
-            <Entry x:Name="UsernameEntry"
-                       Placeholder="Create A Username"/>
-            <Entry x:Name="OrganizationName"
+                <Label Text="Create an Organization account"/>
+                <Entry x:Name="UsernameEntry"
+                   Placeholder="Create A Username"/>
+                <Entry x:Name="OrganizationPassword"
+                   Placeholder="Password" IsPassword="True"/>
+                <Entry x:Name="PasswordConfirmation"
+                   Placeholder="Re-enter Password" IsPassword="True"/>
+                <Entry x:Name="OrganizationName"
                    Placeholder="Organization Name"/>
-            <Entry x:Name="BridgeNumber"
+                <Entry x:Name="BridgeNumber"
                    Placeholder="Enter Your Bridge Number"/>
-            <Entry x:Name="EmailEntry"
-                       Placeholder="Email Address"/>
-            <Entry x:Name="ContactNumber"
-                   Placeholder="Enter A Contact Number"/>
+                <Entry x:Name="AddressEntry" 
+                   Placeholder="Address"/>
+                <Entry x:Name="CityEntry"
+                   Placeholder="City"/>
+                <Entry x:Name="StateEntry"
+                   Placeholder="State"/>
+                <Entry x:Name="ZipCodeEntry"
+                   Placeholder="Zip Code" Keyboard="Numeric"/>
+                <Entry x:Name="EmailEntry"
+                   Placeholder="Email Address"/>
+                <Entry x:Name="ContactNumberEntry"
+                   Placeholder="Enter a Contact Number" Keyboard="Numeric"/>
 
 
-            <Button x:Name="CreateOrganizationAccount"
+                <Button x:Name="CreateOrganizationAccount"
                         Text="Create Account"
                         Clicked="CreateOrganizationAccount_Clicked"/>
 
 
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
