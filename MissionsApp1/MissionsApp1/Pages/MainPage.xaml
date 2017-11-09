@@ -19,25 +19,35 @@
                HorizontalOptions="Center"
                VerticalOptions="Center"/>
 
+        <Label HeightRequest="150"/>
+
         <Button x:Name="LoginButton"
-            Text="Login"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-            Clicked="LoginButton_Clicked"/>
+                BackgroundColor="Indigo"
+                TextColor="LightGray"
+                WidthRequest="215"
+                Text="Login"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Clicked="LoginButton_Clicked"/>
 
         <Button x:Name="CreateUserButton"
-            Text="Create New User"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-            Clicked="CreateUserButton_Clicked"/>
+                BackgroundColor="Indigo"
+                TextColor="LightGray"
+                WidthRequest="215"
+                Text="Create New User"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+             Clicked="CreateUserButton_Clicked"/>
 
         <Button x:Name="CreateOrganizationButton"
-            Text="Create New Organization"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-            Clicked="CreateOrganizationButton_Clicked"/>
-
+                BackgroundColor="Indigo"
+                TextColor="LightGray"
+                WidthRequest="215"
+                Text="Create New Organization"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Clicked="CreateOrganizationButton_Clicked"/>
+        
     </StackLayout>
-
 
 </ContentPage>
