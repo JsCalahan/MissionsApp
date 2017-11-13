@@ -48,8 +48,8 @@
     <Compile Include="Pages\CreateUserPage.xaml.cs">
       <DependentUpon>CreateUserPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\EventDetails.xaml.cs">
-      <DependentUpon>EventDetails.xaml</DependentUpon>
+    <Compile Include="Pages\EventInfo.xaml.cs">
+      <DependentUpon>EventInfo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\EventsPage.xaml.cs">
       <DependentUpon>EventsPage.xaml</DependentUpon>
@@ -168,7 +168,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\EventDetails.xaml">
+    <EmbeddedResource Include="Pages\EventInfo.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

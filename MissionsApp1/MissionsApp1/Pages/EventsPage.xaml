@@ -6,8 +6,11 @@
         <ScrollView>
             <StackLayout BackgroundColor="MintCream">
 
+                <Label Text="This is the events page (temporary)."/>
+
                 <ListView x:Name="EventsListView"
-                          HasUnevenRows="True">
+                          HasUnevenRows="True"
+                          ItemSelected="EventsListView_ItemSelected">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>

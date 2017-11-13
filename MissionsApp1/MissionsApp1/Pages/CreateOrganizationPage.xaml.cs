@@ -45,7 +45,6 @@ namespace MissionsApp1.Pages
             EmailEntry.Text = "";
             ContactNumberEntry.Text = "";
 
-            
             await Navigation.PushAsync(new HomePage());
         }
     }
