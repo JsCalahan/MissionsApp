@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using MissionsApp1.Classes;
 using Xamarin.Forms;
 
 namespace MissionsApp1
@@ -13,6 +13,7 @@ namespace MissionsApp1
         {
             InitializeComponent();
 
+            Organization organization = new Organization();
             MainPage = new NavigationPage(new MainPage());
         }
 

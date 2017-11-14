@@ -9,6 +9,7 @@ namespace MissionsApp1.Classes
     public class Mission
     {
         public string ID { get; set; }
+        public string OrganizationID { get; set; }
         public string Name { get; set; }
         public string OrganizationName { get; set; }
         public string Address { get; set; }

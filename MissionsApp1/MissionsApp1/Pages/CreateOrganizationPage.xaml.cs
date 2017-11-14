@@ -32,6 +32,7 @@ namespace MissionsApp1.Pages
             organization.EmailAddress = EmailEntry.Text;
             organization.PhoneNumber = ContactNumberEntry.Text;
             GlobalConfig.isOrganization = true;
+            GlobalConfig.currentOrganization = organization;
 
             await GlobalConfig.MobileService.GetTable<Organization>().InsertAsync(organization);
 

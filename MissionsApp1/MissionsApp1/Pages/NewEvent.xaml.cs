@@ -23,7 +23,7 @@ namespace MissionsApp1.Pages
             Mission mission = new Mission();
 
             mission.Name = EventName.Text;
-            //mission.OrganizationName = Organ
+            mission.OrganizationName = GlobalConfig.currentOrganization.Name;
             mission.Address = EventAddress.Text;
             mission.City = EventCity.Text;
             mission.State = EventState.Text;
