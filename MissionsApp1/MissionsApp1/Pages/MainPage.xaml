@@ -5,7 +5,7 @@
              xmlns:local="clr-namespace:MissionsApp1"
              x:Class="MissionsApp1.MainPage">
 
-    <StackLayout BackgroundColor="MintCream">
+    <StackLayout BackgroundColor="#e2f0d9">
 
         <Label HeightRequest="20"/>
 

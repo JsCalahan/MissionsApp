@@ -4,8 +4,13 @@
              x:Class="MissionsApp1.Pages.EventInfo">
     <ContentPage.Content>
         <StackLayout BackgroundColor="MintCream">
-            
-            <Label x:Name="EventNameLabel"/>
+
+            <Label x:Name="EventNameLabel"
+                   FontSize="24"
+                   HorizontalOptions="Center"
+                   TextColor="DodgerBlue"/>
+
+            <!--<Label x:Name="EventNameLabel"/>-->
             <Label x:Name="OrganizationNameLabel"/>
             <Label x:Name="EventAddressLabel"/>
             <Label x:Name="EventCityLabel"/>
