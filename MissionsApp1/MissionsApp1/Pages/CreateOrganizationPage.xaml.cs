@@ -20,10 +20,16 @@ namespace MissionsApp1.Pages
 
         private async void CreateOrganizationAccount_Clicked(object sender, EventArgs e)
         {
+            User user = new User();
             Organization organization = new Organization();
 
-            organization.Username = UsernameEntry.Text;
-            organization.Password = OrganizationPassword.Text;
+            user.EmailAddress = EmailEntry.Text;
+            user.Username = UserNameEntry.Text;
+            user.Password = PasswordEntry.Text;
+            user.FirstName = " ";
+            user.LastName = " ";
+            user.ID = Guid.NewGuid().ToString();
+
             organization.Name = OrganizationName.Text;
             organization.Address = AddressEntry.Text;
             organization.City = CityEntry.Text;
@@ -31,9 +37,12 @@ namespace MissionsApp1.Pages
             organization.ZipCode = ZipCodeEntry.Text;
             organization.EmailAddress = EmailEntry.Text;
             organization.PhoneNumber = ContactNumberEntry.Text;
+            organization.UserID = user.ID;
             GlobalConfig.isOrganization = true;
             GlobalConfig.currentOrganization = organization;
 
+
+            await GlobalConfig.MobileService.GetTable<User>().InsertAsync(user);
             await GlobalConfig.MobileService.GetTable<Organization>().InsertAsync(organization);
 
             UsernameEntry.Text = "";
