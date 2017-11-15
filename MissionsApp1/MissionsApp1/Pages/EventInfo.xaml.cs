@@ -18,7 +18,7 @@ namespace MissionsApp1.Pages
             InitializeComponent();
 
             EventNameLabel.Text = mission.Name;
-            OrganizationNameLabel.Text = GlobalConfig.currentOrganization.Name;
+            OrganizationNameLabel.Text = mission.OrganizationName;
             EventAddressLabel.Text = mission.Address;
             EventCityLabel.Text = mission.City;
             EventStateLabel.Text = mission.State;

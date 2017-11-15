@@ -9,14 +9,14 @@
                 <Label Text="Create an Organization account"/>
                 <Entry x:Name="UsernameEntry"
                    Placeholder="Create A Username"/>
-                <Entry x:Name="OrganizationPassword"
+                <Entry x:Name="PasswordEntry"
                    Placeholder="Password" IsPassword="True"/>
                 <Entry x:Name="PasswordConfirmation"
                    Placeholder="Re-enter Password" IsPassword="True"/>
-                <Entry x:Name="OrganizationName"
+                <Entry x:Name="OrganizationNameEntry"
                    Placeholder="Organization Name"/>
-                <Entry x:Name="BridgeNumber"
-                   Placeholder="Enter Your Bridge Number"/>
+                <!--<Entry x:Name="BridgeNumberEntry"
+                   Placeholder="Enter Your Bridge Number"/>-->
                 <Entry x:Name="AddressEntry" 
                    Placeholder="Address"/>
                 <Entry x:Name="CityEntry"
@@ -30,11 +30,9 @@
                 <Entry x:Name="ContactNumberEntry"
                    Placeholder="Enter a Contact Number" Keyboard="Numeric"/>
 
-
                 <Button x:Name="CreateOrganizationAccount"
                         Text="Create Account"
                         Clicked="CreateOrganizationAccount_Clicked"/>
-
 
             </StackLayout>
         </ScrollView>
