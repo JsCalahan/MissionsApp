@@ -20,17 +20,17 @@ namespace MissionsApp1.Pages
 
         private async void CreateOrganizationAccount_Clicked(object sender, EventArgs e)
         {
-            //User user = new User();
-            //Organization organization = new Organization();
+            User user = new User();
+            Organization organization = new Organization();
 
-            //user.EmailAddress = EmailEntry.Text;
-            //user.Username = UserNameEntry.Text;
+            //user.Username = UserameEntry.Text;
             //user.Password = PasswordEntry.Text;
+            //user.EmailAddress = EmailEntry.Text;
             //user.FirstName = " ";
             //user.LastName = " ";
             //user.ID = Guid.NewGuid().ToString();
 
-            //organization.Name = OrganizationName.Text;
+            //organization.Name = OrganizationNameEntry.Text;
             //organization.Address = AddressEntry.Text;
             //organization.City = CityEntry.Text;
             //organization.State = StateEntry.Text;

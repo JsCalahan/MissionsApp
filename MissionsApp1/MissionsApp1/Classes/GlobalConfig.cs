@@ -15,6 +15,6 @@ namespace MissionsApp1.Classes
         "https://missionsapp.azurewebsites.net");
 
         public static bool isOrganization = false;
-        public static Organization currentOrganization;
+        public static User currentUser;
     }
 }

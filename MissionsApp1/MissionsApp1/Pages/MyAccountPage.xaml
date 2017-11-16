@@ -12,8 +12,6 @@
                    HorizontalOptions="Center"/>
 
             <Label x:Name="ProfileNameLabel"
-                   Text="John Doe"
-                   TextColor="Black"
                    HorizontalOptions="Center"/>
 
             <Label Text="Missions"
