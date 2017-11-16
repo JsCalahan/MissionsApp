@@ -18,16 +18,18 @@ namespace MissionsApp1.Pages
             InitializeComponent();
 
             EventNameLabel.Text = mission.Name;
-            OrganizationNameLabel.Text = GlobalConfig.currentOrganization.Name;
+            OrganizationNameLabel.Text = mission.OrganizationName;
             EventAddressLabel.Text = mission.Address;
             EventCityLabel.Text = mission.City;
             EventStateLabel.Text = mission.State;
             EventZipCodeLabel.Text = mission.ZipCode;
-            EventLatitudeLabel.Text = Convert.ToString(mission.Latitude);
-            EventLongitudeLabel.Text = Convert.ToString(mission.Longitude);
+            //EventLatitudeLabel.Text = Convert.ToString(mission.Latitude);
+            //EventLongitudeLabel.Text = Convert.ToString(mission.Longitude);
             EventDateLabel.Text = mission.Date;
             EventStartTime.Text = mission.StartTime;
             EventEndTime.Text = mission.EndTime;
+
+
         }
     }
 }

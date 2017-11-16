@@ -14,46 +14,7 @@
                HorizontalOptions="Center"
                VerticalOptions="Center"/>
 
-        <!--<Label Text="Welcome to"
-               Font="32"
-               TextColor="DeepSkyBlue"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"/>
-
-        <Label Text="Missions for Christians"
-               Font="32"
-               TextColor="DeepSkyBlue"
-               HorizontalOptions="Center"
-               VerticalOptions="Center"/>-->
-
-        <Label HeightRequest="75"/>
-
-        <!--<Button x:Name="LoginButton"
-                BackgroundColor="Indigo"
-                TextColor="LightGray"
-                WidthRequest="215"
-                Text="Login"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                Clicked="LoginButton_Clicked"/>
-
-        <Button x:Name="CreateUserButton"
-                BackgroundColor="Indigo"
-                TextColor="LightGray"
-                WidthRequest="215"
-                Text="Create New User"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-             Clicked="CreateUserButton_Clicked"/>
-        
-        <Button x:Name="CreateOrganizationButton"
-                BackgroundColor="Indigo"
-                TextColor="LightGray"
-                WidthRequest="215"
-                Text="Create New Organization"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                Clicked="CreateOrganizationButton_Clicked"/>-->
+        <Label HeightRequest="50"/>
 
         <Grid>
             <Grid.RowDefinitions>
@@ -67,7 +28,8 @@
             <Image x:Name="NewUser"
                    Source="newuser.png"
                    Grid.Row="0"
-                   Grid.Column="0">
+                   Grid.Column="0"
+                   HorizontalOptions="End">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer Tapped="CreateUserButton_Clicked" NumberOfTapsRequired="1"/>
                 </Image.GestureRecognizers>
@@ -77,7 +39,8 @@
             <Image x:Name="NewOrganization"
                    Source="neworganization.png"
                    Grid.Row="0"
-                   Grid.Column="1">
+                   Grid.Column="1"
+                   HorizontalOptions="Start">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer Tapped="CreateOrganizationButton_Clicked" NumberOfTapsRequired="1"/>
                 </Image.GestureRecognizers>

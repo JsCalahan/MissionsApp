@@ -11,17 +11,27 @@
                    TextColor="DodgerBlue"/>
 
             <!--<Label x:Name="EventNameLabel"/>-->
+
+            <Label Text="Organization:"/>
+
             <Label x:Name="OrganizationNameLabel"/>
+
+            <Label Text="Address:"/>
             <Label x:Name="EventAddressLabel"/>
             <Label x:Name="EventCityLabel"/>
             <Label x:Name="EventStateLabel"/>
             <Label x:Name="EventZipCodeLabel"/>
-            <Label x:Name="EventLatitudeLabel"/>
-            <Label x:Name="EventLongitudeLabel"/>
+                
+            <!--<Label x:Name="EventLatitudeLabel"/>
+            <Label x:Name="EventLongitudeLabel"/>-->
+            <Label Text="Date:"/>
             <Label x:Name="EventDateLabel"/>
+
+            <Label Text="Time"/>
             <Label x:Name="EventStartTime"/>
             <Label x:Name="EventEndTime"/>
             
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
+
