@@ -17,10 +17,11 @@ namespace MissionsApp1.Pages
 
         public ObservableCollection<string> Missions; 
 
-        public MyAccountPage ()
+        public MyAccountPage (User user)
 		{
             InitializeComponent();
 
+            //ProfileNameLabel.Text = user.FirstName + " " + user.LastName;
         }
     }
 }
