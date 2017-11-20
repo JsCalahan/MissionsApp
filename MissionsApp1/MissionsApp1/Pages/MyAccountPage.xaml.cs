@@ -15,6 +15,22 @@ namespace MissionsApp1.Pages
 	public partial class MyAccountPage : ContentPage
 	{
 
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            //making a new list to hold missions user is participating in
+            List<Mission> myEvents = new List<Mission>();
+            //
+            List<UserEvent> userEvents = await GlobalConfig.MobileService.GetTable<UserEvent>().Where(rec => rec.UserID == GlobalConfig.currentUser.ID).ToListAsync();
+            foreach(UserEvent evnt in userEvents)
+            {
+                List<Mission> events = await GlobalConfig.MobileService.GetTable<Mission>().Where(rec => rec.ID == evnt.EventID).ToListAsync();
+                myEvents.Add(events.First());
+            }
+            UserEventListView.ItemsSource = myEvents;
+        }
+
         public ObservableCollection<string> Missions; 
 
         public MyAccountPage ()
