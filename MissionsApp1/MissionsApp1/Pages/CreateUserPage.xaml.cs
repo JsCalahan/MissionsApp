@@ -37,6 +37,8 @@ namespace MissionsApp1.Pages
             PasswordEntry.Text = "";
             EmailEntry.Text = "";
 
+            GlobalConfig.currentUser = user;
+
             await Navigation.PushAsync(new HomePage());
         }
 

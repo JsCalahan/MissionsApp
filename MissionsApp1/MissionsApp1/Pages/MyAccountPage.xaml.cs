@@ -17,7 +17,7 @@ namespace MissionsApp1.Pages
 
         public ObservableCollection<string> Missions; 
 
-        public MyAccountPage (User user)
+        public MyAccountPage ()
 		{
             InitializeComponent();
 

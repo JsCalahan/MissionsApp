@@ -13,6 +13,7 @@ namespace MissionsApp1.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EventInfo : ContentPage
     {
+        public Mission MissionOnPage;
         public EventInfo(Mission mission)
         {
             InitializeComponent();
@@ -29,7 +30,17 @@ namespace MissionsApp1.Pages
             EventStartTime.Text = mission.StartTime;
             EventEndTime.Text = mission.EndTime;
 
+            MissionOnPage = mission;
 
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            UserEvent userEvent = new UserEvent();
+            userEvent.EventID = MissionOnPage.ID;
+            userEvent.UserID = GlobalConfig.currentUser.ID;
+            await GlobalConfig.MobileService.GetTable<UserEvent>().InsertAsync(userEvent);
+            Navigation.PushAsync(new MyAccountPage());
         }
     }
 }

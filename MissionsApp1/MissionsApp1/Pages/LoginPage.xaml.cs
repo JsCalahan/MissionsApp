@@ -18,10 +18,23 @@ namespace MissionsApp1.Pages
             InitializeComponent();
         }
 
-        private void Login_Clicked(object sender, EventArgs e)
+        private async void Login_Clicked(object sender, EventArgs e)
         {
-            GlobalConfig.isOrganization = false;
-            Navigation.PushAsync(new HomePage());
+            List<User> users = await GlobalConfig.MobileService.GetTable<User>().Where(rec=>rec.Username==Username.Text&&rec.Password==Password.Text).ToListAsync();
+            if(users.Count==1)
+            {
+                GlobalConfig.currentUser = users.First();
+                List<Organization> organizations = await GlobalConfig.MobileService.GetTable<Organization>().Where(rec => rec.UserID == GlobalConfig.currentUser.ID).ToListAsync();
+                if (organizations.Count == 1)
+                { GlobalConfig.isOrganization = true; }
+                Navigation.PushAsync(new HomePage());
+            }
+            else
+            {
+                DisplayAlert("Error", "Invalid Credentials", "Ok");
+            }
+
+            
         }
     }
 }

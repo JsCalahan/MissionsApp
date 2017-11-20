@@ -23,39 +23,38 @@ namespace MissionsApp1.Pages
             User user = new User();
             Organization organization = new Organization();
 
-            //user.Username = UserameEntry.Text;
-            //user.Password = PasswordEntry.Text;
-            //user.EmailAddress = EmailEntry.Text;
-            //user.FirstName = " ";
-            //user.LastName = " ";
-            //user.ID = Guid.NewGuid().ToString();
+            user.Username = UsernameEntry.Text;
+            user.Password = PasswordEntry.Text;
+            user.EmailAddress = EmailEntry.Text;
+            user.FirstName = OrganizationNameEntry.Text;
+            user.LastName = " ";
+            user.ID = Guid.NewGuid().ToString();
 
-            //organization.Name = OrganizationNameEntry.Text;
-            //organization.Address = AddressEntry.Text;
-            //organization.City = CityEntry.Text;
-            //organization.State = StateEntry.Text;
-            //organization.ZipCode = ZipCodeEntry.Text;
-            //organization.EmailAddress = EmailEntry.Text;
-            //organization.PhoneNumber = ContactNumberEntry.Text;
-            //organization.UserID = user.ID;
-            //GlobalConfig.isOrganization = true;
-            //GlobalConfig.currentOrganization = organization;
+            organization.Name = OrganizationNameEntry.Text;
+            organization.Address = AddressEntry.Text;
+            organization.City = CityEntry.Text;
+            organization.State = StateEntry.Text;
+            organization.ZipCode = ZipCodeEntry.Text;
+            organization.EmailAddress = EmailEntry.Text;
+            organization.PhoneNumber = ContactNumberEntry.Text;
+            organization.UserID = user.ID;
+            
 
 
-            //await GlobalConfig.MobileService.GetTable<User>().InsertAsync(user);
-            //await GlobalConfig.MobileService.GetTable<Organization>().InsertAsync(organization);
+            await GlobalConfig.MobileService.GetTable<User>().InsertAsync(user);
+            await GlobalConfig.MobileService.GetTable<Organization>().InsertAsync(organization);
+            GlobalConfig.currentUser = user;
+            GlobalConfig.isOrganization = true;
 
-            //UsernameEntry.Text = "";
-            //OrganizationPassword.Text = "";
-            //OrganizationName.Text = "";
-            //AddressEntry.Text = "";
-            //CityEntry.Text = "";
-            //StateEntry.Text = "";
-            //ZipCodeEntry.Text = "";
-            //EmailEntry.Text = "";
-            //ContactNumberEntry.Text = "";
+            UsernameEntry.Text = "";
+            AddressEntry.Text = "";
+            CityEntry.Text = "";
+            StateEntry.Text = "";
+            ZipCodeEntry.Text = "";
+            EmailEntry.Text = "";
+            ContactNumberEntry.Text = "";
 
-            //await Navigation.PushAsync(new HomePage());
+            await Navigation.PushAsync(new HomePage());
         }
     }
 }

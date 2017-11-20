@@ -27,7 +27,7 @@ namespace MissionsApp1.Pages
         private void AccountPage_Tapped(object sender, EventArgs e)
         {
             
-            Navigation.PushAsync(new MyAccountPage(User loggedInUser));
+            Navigation.PushAsync(new MyAccountPage());
         }
 
         private void OrganizationSearch_Tapped(object sender, EventArgs e)

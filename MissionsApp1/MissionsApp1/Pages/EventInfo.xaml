@@ -30,7 +30,10 @@
             <Label Text="Time"/>
             <Label x:Name="EventStartTime"/>
             <Label x:Name="EventEndTime"/>
-            
+
+            <Button Text="Participate"
+                    Clicked="Button_Clicked"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
