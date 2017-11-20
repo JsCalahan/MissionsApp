@@ -3,33 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MissionsApp1.Pages.EventInfo">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="MintCream">
+        <StackLayout BackgroundColor="#e2f0d9">
 
             <Label x:Name="EventNameLabel"
                    FontSize="24"
                    HorizontalOptions="Center"
                    TextColor="DodgerBlue"/>
 
-            <!--<Label x:Name="EventNameLabel"/>-->
+            <Label HeightRequest="75"/>
 
-            <Label Text="Organization:"/>
+            <Label x:Name="OrganizationNameLabel"
+                   FontSize="16"/>
 
-            <Label x:Name="OrganizationNameLabel"/>
+            <Label x:Name="Address"
+                   FontSize="16"/>
 
-            <Label Text="Address:"/>
-            <Label x:Name="EventAddressLabel"/>
-            <Label x:Name="EventCityLabel"/>
-            <Label x:Name="EventStateLabel"/>
-            <Label x:Name="EventZipCodeLabel"/>
-                
-            <!--<Label x:Name="EventLatitudeLabel"/>
-            <Label x:Name="EventLongitudeLabel"/>-->
-            <Label Text="Date:"/>
-            <Label x:Name="EventDateLabel"/>
+            <Label x:Name="EventDateLabel"
+                   FontSize="16"/>
 
-            <Label Text="Time"/>
-            <Label x:Name="EventStartTime"/>
-            <Label x:Name="EventEndTime"/>
+            <Label x:Name="EventTime"
+                   FontSize="16"/>
 
             <Button Text="Participate"
                     Clicked="Button_Clicked"/>
