@@ -10,6 +10,8 @@
                    HorizontalOptions="Center"
                    TextColor="DodgerBlue"/>
 
+            <Image Source="mapoverview.png"/>
+
             <Label HeightRequest="75"/>
 
             <Label x:Name="OrganizationNameLabel"

@@ -4,7 +4,7 @@
              x:Class="MissionsApp1.Pages.CreateOrganizationPage">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
+            <StackLayout BackgroundColor="#e2f0d9">
 
                 <Label Text="Create an Organization account"/>
                 <Entry x:Name="UsernameEntry"

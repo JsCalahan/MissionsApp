@@ -24,7 +24,7 @@ namespace MissionsApp1.Pages
             EventTime.Text = "Time: " + mission.StartTime + " - " + mission.EndTime;
 
 
-            Address.Text = mission.Address + ", " + mission.City + " " + mission.State + ", " + mission.ZipCode;
+            Address.Text = "Location: " + mission.Address + ", " + mission.City + " " + mission.State + ", " + mission.ZipCode;
 
             MissionOnPage = mission;
 

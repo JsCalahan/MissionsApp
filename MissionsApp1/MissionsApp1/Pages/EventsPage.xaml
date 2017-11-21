@@ -4,7 +4,7 @@
              x:Class="MissionsApp1.Pages.EventsPage">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout BackgroundColor="MintCream">
+            <StackLayout BackgroundColor="#e2f0d9">
 
                 <Label Text="This is the events page (temporary)."/>
 

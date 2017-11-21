@@ -37,7 +37,23 @@ namespace MissionsApp1.Pages
 		{
             InitializeComponent();
 
-            //ProfileNameLabel.Text = user.FirstName + " " + user.LastName;
+            ProfileNameLabel.Text = GlobalConfig.currentUser.FirstName;
+        }
+        private void EventsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem == null)
+            {
+                return;
+            }
+
+            //grabs selected item in listview
+            Mission selectedMission = e.SelectedItem as Mission;
+
+            //deselect
+            (sender as ListView).SelectedItem = null;
+
+            //sends mission to detailed page
+            Navigation.PushAsync(new EventInfo(selectedMission));
         }
     }
 }
