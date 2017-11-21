@@ -27,6 +27,8 @@ namespace MissionsApp1.Pages
                 List<Organization> organizations = await GlobalConfig.MobileService.GetTable<Organization>().Where(rec => rec.UserID == GlobalConfig.currentUser.ID).ToListAsync();
                 if (organizations.Count == 1)
                 { GlobalConfig.isOrganization = true; }
+                Settings.UserData = GlobalConfig.currentUser;
+                Settings.isOrganization = GlobalConfig.isOrganization;
                 Navigation.PushAsync(new HomePage());
             }
             else

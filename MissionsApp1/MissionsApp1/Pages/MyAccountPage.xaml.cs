@@ -21,11 +21,12 @@ namespace MissionsApp1.Pages
 
             //making a new list to hold missions user is participating in
             List<Mission> myEvents = new List<Mission>();
-            //
+            //linking user event table
             List<UserEvent> userEvents = await GlobalConfig.MobileService.GetTable<UserEvent>().Where(rec => rec.UserID == GlobalConfig.currentUser.ID).ToListAsync();
-            foreach(UserEvent evnt in userEvents)
+            //
+            foreach(UserEvent link in userEvents)
             {
-                List<Mission> events = await GlobalConfig.MobileService.GetTable<Mission>().Where(rec => rec.ID == evnt.EventID).ToListAsync();
+                List<Mission> events = await GlobalConfig.MobileService.GetTable<Mission>().Where(rec => rec.ID == link.EventID).ToListAsync();
                 myEvents.Add(events.First());
             }
             UserEventListView.ItemsSource = myEvents;
