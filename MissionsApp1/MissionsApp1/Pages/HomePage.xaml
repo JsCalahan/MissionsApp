@@ -12,7 +12,7 @@
                     <RowDefinition Height="10"/> <!--Spacer Row-->
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="*" />
-                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="100"/>
                     <RowDefinition Height="20"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
@@ -90,7 +90,8 @@
                HeightRequest="100"
                HorizontalOptions="Center"
                TextColor="DeepSkyBlue"
-                       Grid.Row="6">
+                       Grid.Row="7"
+                       Grid.ColumnSpan="2">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="LogoutButton_Clicked" NumberOfTapsRequired="1"/>
                     </Label.GestureRecognizers>
