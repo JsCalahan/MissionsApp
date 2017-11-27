@@ -26,7 +26,8 @@
             <Label x:Name="EventTime"
                    FontSize="16"/>
 
-            <Button Text="Participate"
+            <Button x:Name="ParticipateButton" 
+                    Text="Participate"
                     Clicked="Button_Clicked"/>
 
         </StackLayout>

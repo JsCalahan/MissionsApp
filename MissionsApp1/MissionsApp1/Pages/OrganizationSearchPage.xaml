@@ -8,7 +8,7 @@
             <Label HeightRequest="25"/>
             
             <Entry Text="Search for organizations"
-                   BackgroundColor="White"
+                   BackgroundColor="White" 
                    HorizontalOptions="Center"/>
 
             <Image Source="mapoverview.png"/>

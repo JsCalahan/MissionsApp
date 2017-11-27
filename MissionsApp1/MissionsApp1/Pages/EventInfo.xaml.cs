@@ -18,6 +18,11 @@ namespace MissionsApp1.Pages
         {
             InitializeComponent();
 
+            if (GlobalConfig.isOrganization == true)
+            {
+                ParticipateButton.IsVisible = false;
+            }
+
             EventNameLabel.Text = mission.Name;
             OrganizationNameLabel.Text = "Organization: " + mission.OrganizationName;
             EventDateLabel.Text = "Date: " + mission.Date;
