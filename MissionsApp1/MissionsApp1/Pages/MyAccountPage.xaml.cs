@@ -19,17 +19,36 @@ namespace MissionsApp1.Pages
         {
             base.OnAppearing();
 
+            if(GlobalConfig.isOrganization == true)
+            {
+                UserEventListView.IsVisible = false;
+                OrganizationEventListView.IsVisible = true;
+            }
+
             //making a new list to hold missions user is participating in
             List<Mission> myEvents = new List<Mission>();
-            //linking user event table
-            List<UserEvent> userEvents = await GlobalConfig.MobileService.GetTable<UserEvent>().Where(rec => rec.UserID == GlobalConfig.currentUser.ID).ToListAsync();
-            //
-            foreach(UserEvent link in userEvents)
+            if (GlobalConfig.isOrganization == false)
             {
-                List<Mission> events = await GlobalConfig.MobileService.GetTable<Mission>().Where(rec => rec.ID == link.EventID).ToListAsync();
-                myEvents.Add(events.First());
+                //linking user event table
+                List<UserEvent> userEvents = await GlobalConfig.MobileService.GetTable<UserEvent>().Where(rec => rec.UserID == GlobalConfig.currentUser.ID).ToListAsync();
+                //
+                foreach (UserEvent link in userEvents)
+                {
+                    List<Mission> events = await GlobalConfig.MobileService.GetTable<Mission>().Where(rec => rec.ID == link.EventID).ToListAsync();
+                    myEvents.Add(events.First());
+                }
+                UserEventListView.ItemsSource = myEvents;
             }
-            UserEventListView.ItemsSource = myEvents;
+            else
+            {
+                List<UserEvent> userEvents = await GlobalConfig.MobileService.GetTable<UserEvent>().Where(rec => rec.UserID == GlobalConfig.currentUser.ID).ToListAsync();
+                foreach (UserEvent link in userEvents)
+                {
+                    List<Mission> events = await GlobalConfig.MobileService.GetTable<Mission>().Where(rec => rec.ID == link.EventID).ToListAsync();
+                    myEvents.Add(events.First());
+                }
+                UserEventListView.ItemsSource = myEvents;
+            }
         }
 
         public ObservableCollection<string> Missions; 
@@ -41,6 +60,23 @@ namespace MissionsApp1.Pages
             ProfileNameLabel.Text = GlobalConfig.currentUser.FirstName;
         }
         private void EventsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem == null)
+            {
+                return;
+            }
+
+            //grabs selected item in listview
+            Mission selectedMission = e.SelectedItem as Mission;
+
+            //deselect
+            (sender as ListView).SelectedItem = null;
+
+            //sends mission to detailed page
+            Navigation.PushAsync(new EventInfo(selectedMission));
+        }
+
+        private void OrganizationEventListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem == null)
             {
