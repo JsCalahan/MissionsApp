@@ -4,11 +4,14 @@
              x:Class="MissionsApp1.Pages.OrganizationSearchPage">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#e2f0d9">
-            
-    
-            <Label Text="Search for organizations" />
 
-            <Image Source="http://static.adweek.com/adweek.com-prod/wp-content/uploads/sites/2/2015/11/Google-Maps.png"/>
+            <Label HeightRequest="25"/>
+            
+            <Entry Text="Search for organizations"
+                   BackgroundColor="White"
+                   HorizontalOptions="Center"/>
+
+            <Image Source="mapoverview.png"/>
 
 
         </StackLayout>

@@ -12,6 +12,8 @@
                     <RowDefinition Height="10"/> <!--Spacer Row-->
                     <RowDefinition Height="30"/>
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="20"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -83,6 +85,16 @@
                     </Image.GestureRecognizers>
                 </Image>
 
+                <Label x:Name="Logout"
+               Text="Logout"
+               HeightRequest="100"
+               HorizontalOptions="Center"
+               TextColor="DeepSkyBlue"
+                       Grid.Row="6">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="LogoutButton_Clicked" NumberOfTapsRequired="1"/>
+                    </Label.GestureRecognizers>
+                </Label>
 
             </Grid>
         </StackLayout>

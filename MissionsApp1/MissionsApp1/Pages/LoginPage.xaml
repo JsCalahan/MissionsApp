@@ -8,6 +8,7 @@
             <Entry x:Name="Username"
                        Placeholder="Username"/>
             <Entry x:Name="Password"
+                   IsPassword="True"
                        Placeholder="Password"/>
             <Button x:Name="Login"
                     Text="Login"

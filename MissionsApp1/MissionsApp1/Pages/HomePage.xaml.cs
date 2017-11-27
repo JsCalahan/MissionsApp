@@ -44,5 +44,11 @@ namespace MissionsApp1.Pages
         {
             Navigation.PushAsync(new NewEvent());
         }
+
+        private void LogoutButton_Clicked(object sender, EventArgs e)
+        {
+            GlobalConfig.currentUser = null;
+            Navigation.PushAsync(new MainPage());
+        }
     }
 }
