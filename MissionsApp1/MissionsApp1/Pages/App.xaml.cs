@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using MissionsApp1.Classes;
 using Xamarin.Forms;
+using MissionsApp1.Pages;
 
 namespace MissionsApp1
 {
@@ -13,8 +14,16 @@ namespace MissionsApp1
         {
             InitializeComponent();
 
-            Organization organization = new Organization();
-            MainPage = new NavigationPage(new MainPage());
+            GlobalConfig.currentUser = Settings.UserData;
+            GlobalConfig.isOrganization = Settings.isOrganization;
+            if(GlobalConfig.currentUser == null)
+            {
+                MainPage = new NavigationPage(new LoginPage());
+            }
+            else
+            {
+                MainPage = new NavigationPage(new MainPage());
+            }
         }
 
         protected override void OnStart()

@@ -20,8 +20,32 @@
                    HorizontalOptions="Center"/>
 
             <ListView x:Name="UserEventListView"
+                      IsVisible="False"
                       HasUnevenRows="True"
                       ItemSelected="EventsListView_ItemSelected"
+                      HeightRequest="300">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="15,0">
+                                <Label Text="{Binding Name}"
+                                               FontAttributes="Bold"                                           
+                                               FontSize="Large"                                           
+                                               Grid.Row="0"                                           
+                                               Grid.Column="0"/>
+                                <Label Text="{Binding Organization}"                                           
+                                               Grid.Row="1"                                           
+                                               Grid.Column="0"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView x:Name="OrganizationEventListView"
+                      IsVisible="False"
+                      HasUnevenRows="True"
+                      ItemSelected="OrganizationEventListView_ItemSelected"
                       HeightRequest="300">
                 <ListView.ItemTemplate>
                     <DataTemplate>
