@@ -8,6 +8,9 @@
 
                 <Label Text="This is the events page (temporary)."/>
 
+                <SearchBar x:Name="SearchBar"
+                           Placeholder="Search"/>
+
                 <ListView x:Name="EventsListView"
                           HasUnevenRows="True"
                           ItemSelected="EventsListView_ItemSelected">

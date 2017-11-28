@@ -11,7 +11,7 @@ namespace MissionsApp1.Classes
 {
     class Settings
     {
-        private const string UserJson = "";
+        private const string UserJson = "User";
         private static readonly string UserJsonDefault = "";
 
 

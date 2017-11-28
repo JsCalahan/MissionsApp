@@ -18,11 +18,11 @@ namespace MissionsApp1
             GlobalConfig.isOrganization = Settings.isOrganization;
             if(GlobalConfig.currentUser == null)
             {
-                MainPage = new NavigationPage(new LoginPage());
+                MainPage = new NavigationPage(new MainPage());
             }
             else
             {
-                MainPage = new NavigationPage(new MainPage());
+                MainPage = new NavigationPage(new HomePage());
             }
         }
 

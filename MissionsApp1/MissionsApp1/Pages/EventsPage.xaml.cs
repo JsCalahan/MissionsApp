@@ -18,6 +18,7 @@ namespace MissionsApp1.Pages
 
         protected async override void OnAppearing()
         {
+      
             base.OnAppearing();
 
             List<Mission> missionDatabase = await GlobalConfig.MobileService.GetTable<Mission>().Where(rec => true).ToListAsync();
@@ -28,6 +29,8 @@ namespace MissionsApp1.Pages
         public EventsPage()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasBackButton(this, false);
         }
 
         private void EventsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
