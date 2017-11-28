@@ -6,10 +6,9 @@
         <StackLayout BackgroundColor="#e2f0d9">
 
             <Label HeightRequest="25"/>
-            
-            <Entry Text="Search for organizations"
-                   BackgroundColor="White" 
-                   HorizontalOptions="Center"/>
+
+            <SearchBar x:Name="OrganizationSearch"
+                       Placeholder="Search"/>
 
             <Image Source="mapoverview.png"/>
 
