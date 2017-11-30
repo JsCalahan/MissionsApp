@@ -18,7 +18,6 @@ namespace MissionsApp1.Classes
 
         public static bool isOrganization = false;
         public static User currentUser;
-
     }
 }
         

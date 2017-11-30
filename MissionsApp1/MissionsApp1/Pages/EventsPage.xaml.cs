@@ -15,14 +15,16 @@ namespace MissionsApp1.Pages
     public partial class EventsPage : ContentPage
     {
         public ObservableCollection<Mission> Missions; // { get; set; }
-
+        private List<Mission> allMissions;
         protected async override void OnAppearing()
         {
       
             base.OnAppearing();
 
-            List<Mission> missionDatabase = await GlobalConfig.MobileService.GetTable<Mission>().Where(rec => true).ToListAsync();
+            DateTime yesterday = DateTime.Now.AddDays(-1);
+            List<Mission> missionDatabase = await GlobalConfig.MobileService.GetTable<Mission>().Where(rec => rec.Date >= yesterday).ToListAsync();
             this.Missions = new ObservableCollection<Mission>(missionDatabase);
+            allMissions = missionDatabase;
 
             this.EventsListView.ItemsSource = this.Missions;
         }
@@ -30,7 +32,7 @@ namespace MissionsApp1.Pages
         {
             InitializeComponent();
 
-            NavigationPage.SetHasBackButton(this, false);
+            //NavigationPage.SetHasBackButton(this, false);
         }
 
         private void EventsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -48,6 +50,19 @@ namespace MissionsApp1.Pages
 
             //sends mission to detailed page
             Navigation.PushAsync(new EventInfo(selectedMission));
+        }
+
+        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if(String.IsNullOrEmpty(e.NewTextValue))
+            {
+                this.Missions = new ObservableCollection<Mission>(this.allMissions);
+            }
+            else
+            {
+                this.Missions = new ObservableCollection<Mission>(this.Missions.Where(rec => rec.Name.ToLower().Contains(e.NewTextValue.ToLower())));
+            }
+            this.EventsListView.ItemsSource = this.Missions;
         }
     }
 

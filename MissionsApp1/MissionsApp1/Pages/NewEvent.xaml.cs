@@ -30,7 +30,7 @@ namespace MissionsApp1.Pages
             mission.ZipCode = EventZipCode.Text;
             mission.Latitude = Convert.ToDouble(EventLatitude.Text);
             mission.Longitude = Convert.ToDouble(EventLongitude.Text);
-            mission.Date = EventDate.Text;
+            mission.Date = Convert.ToDateTime(EventDate.Text);
             mission.StartTime = EventStartTime.Text;
             mission.EndTime = EventEndTime.Text;
 
