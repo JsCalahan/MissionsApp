@@ -24,6 +24,12 @@ namespace MissionsApp1.Pages
             {
                 ParticipateButton.IsVisible = true;
             }
+
+            if (GlobalConfig.isOrganization == true)
+            {
+                ParticipateButton.IsVisible = false;
+            }
+
         }
         public Mission MissionOnPage;
         public EventInfo(Mission mission)
@@ -32,11 +38,7 @@ namespace MissionsApp1.Pages
 
             
 
-            if (GlobalConfig.isOrganization == true)
-            {
-                ParticipateButton.IsVisible = false;
-            }
-
+           
             EventNameLabel.Text = mission.Name;
             OrganizationNameLabel.Text = "Organization: " + mission.OrganizationName;
             EventDateLabel.Text = "Date: " + mission.Date.ToString("yyyy-MM-dd");
