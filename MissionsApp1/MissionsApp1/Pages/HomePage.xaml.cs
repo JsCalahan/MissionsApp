@@ -48,6 +48,8 @@ namespace MissionsApp1.Pages
         private void LogoutButton_Clicked(object sender, EventArgs e)
         {
             GlobalConfig.currentUser = null;
+            Settings.UserData = null;
+            Settings.isOrganization = false;
             GlobalConfig.isOrganization = false;
             Navigation.PushAsync(new MainPage());
         }
