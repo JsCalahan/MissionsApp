@@ -6,8 +6,6 @@
         <ScrollView>
             <StackLayout BackgroundColor="#e2f0d9">
 
-                <Label Text="This is the events page (temporary)."/>
-
                 <SearchBar x:Name="SearchBar"
                            Placeholder="Search"
                            TextChanged="SearchBar_TextChanged"/>
@@ -41,6 +39,11 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+
+                <Button x:Name="Home"
+                    Text="Home"
+                    Clicked="Home_Clicked"/>
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

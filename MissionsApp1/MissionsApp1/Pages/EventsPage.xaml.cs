@@ -64,6 +64,11 @@ namespace MissionsApp1.Pages
             }
             this.EventsListView.ItemsSource = this.Missions;
         }
+
+        private void Home_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new HomePage());
+        }
     }
 
 }

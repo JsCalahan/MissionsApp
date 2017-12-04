@@ -57,5 +57,10 @@ namespace MissionsApp1.Pages
             await GlobalConfig.MobileService.GetTable<UserEvent>().InsertAsync(userEvent);
             Navigation.PushAsync(new MyAccountPage());
         }
+
+        private void Home_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new HomePage());
+        }
     }
 }

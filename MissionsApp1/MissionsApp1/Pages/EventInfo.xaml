@@ -30,6 +30,10 @@
                     Text="Participate"
                     Clicked="Button_Clicked"
                     IsVisible="false"/>
+            
+            <Button x:Name="Home"
+                    Text="Home"
+                    Clicked="Home_Clicked"/>
 
         </StackLayout>
     </ContentPage.Content>
