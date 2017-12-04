@@ -16,6 +16,9 @@ namespace MissionsApp1.Pages
         public HomePage()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasBackButton(this, false);
+
             if (GlobalConfig.isOrganization == false)
             {
                 NewEventImage.IsVisible = false;

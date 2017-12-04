@@ -32,7 +32,7 @@ namespace MissionsApp1.Pages
         {
             InitializeComponent();
 
-            //NavigationPage.SetHasBackButton(this, false);
+            NavigationPage.SetHasBackButton(this, false);
         }
 
         private void EventsListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)

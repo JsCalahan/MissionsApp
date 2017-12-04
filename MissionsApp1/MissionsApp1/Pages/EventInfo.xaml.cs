@@ -17,6 +17,8 @@ namespace MissionsApp1.Pages
         {
             base.OnAppearing();
 
+            NavigationPage.SetHasBackButton(this, false);
+
             List<UserEvent> userEvents = await GlobalConfig.MobileService.GetTable<UserEvent>().Where(rec => rec.UserID == GlobalConfig.currentUser.ID).ToListAsync();
             if (!userEvents.Any(rec => rec.EventID == MissionOnPage.ID))
             {
