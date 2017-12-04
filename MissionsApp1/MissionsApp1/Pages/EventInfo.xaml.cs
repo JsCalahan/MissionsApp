@@ -13,6 +13,16 @@ namespace MissionsApp1.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EventInfo : ContentPage
     {
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            List<UserEvent> userEvents = await GlobalConfig.MobileService.GetTable<UserEvent>().Where(rec => rec.UserID == GlobalConfig.currentUser.ID).ToListAsync();
+            if (!userEvents.Any(rec => rec.EventID == MissionOnPage.ID))
+            {
+                ParticipateButton.IsVisible = true;
+            }
+        }
         public Mission MissionOnPage;
         public EventInfo(Mission mission)
         {

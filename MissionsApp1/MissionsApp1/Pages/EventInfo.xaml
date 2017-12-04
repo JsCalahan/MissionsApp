@@ -28,7 +28,8 @@
 
             <Button x:Name="ParticipateButton" 
                     Text="Participate"
-                    Clicked="Button_Clicked"/>
+                    Clicked="Button_Clicked"
+                    IsVisible="false"/>
 
         </StackLayout>
     </ContentPage.Content>
