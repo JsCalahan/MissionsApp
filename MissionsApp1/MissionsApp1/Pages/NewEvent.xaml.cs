@@ -7,6 +7,7 @@ using MissionsApp1.Classes;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Globalization;
 
 namespace MissionsApp1.Pages
 {
@@ -20,9 +21,6 @@ namespace MissionsApp1.Pages
 
         private async void CreateEvent_Clicked(object sender, EventArgs e)
         {
-            CreateEvent.IsVisible = false;
-            Loader.IsVisible = true;
-
             Mission mission = new Mission();
 
             mission.Name = EventName.Text;
@@ -31,11 +29,11 @@ namespace MissionsApp1.Pages
             mission.City = EventCity.Text;
             mission.State = EventState.Text;
             mission.ZipCode = EventZipCode.Text;
-            mission.Latitude = 0;
-            mission.Longitude = 0;
-            mission.Date = Convert.ToDateTime(EventDate.Text);
-            mission.StartTime = EventStartTime.Text;
-            mission.EndTime = EventEndTime.Text;
+            mission.Latitude = Convert.ToDouble(EventLatitude.Text);
+            mission.Longitude = Convert.ToDouble(EventLongitude.Text);
+            mission.Date = EventDate.Date;
+            mission.StartTime = EventStartTime.Time.ToString(/*"hh:mm tt", CultureInfo.InvariantCulture*/);
+            mission.EndTime = EventEndTime.Time.ToString(/*"hh:mm tt", CultureInfo.InvariantCulture*/);
 
             await GlobalConfig.MobileService.GetTable<Mission>().InsertAsync(mission);
 
@@ -46,9 +44,6 @@ namespace MissionsApp1.Pages
             EventZipCode.Text = "";
             EventLatitude.Text = "";
             EventLongitude.Text = "";
-            EventDate.Text = "";
-            EventStartTime.Text = "";
-            EventEndTime.Text = "";
 
             await Navigation.PushAsync(new EventsPage());
         }

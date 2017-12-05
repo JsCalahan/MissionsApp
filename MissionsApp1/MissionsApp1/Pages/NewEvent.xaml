@@ -21,22 +21,17 @@
             <Entry x:Name="EventZipCode"
                        Placeholder="Zip Code of Event"/>
             <Entry x:Name="EventLatitude"
-                       Placeholder="Latitude of Event" IsVisible="False"/>
+                       Placeholder="Latitude of Event"/>
             <Entry x:Name="EventLongitude"
-                       Placeholder="Longitude of Event" IsVisible="False"/>
-            <Entry x:Name="EventDate"
-                       Placeholder="Date of Event"/>
-            <Entry x:Name="EventStartTime"
-                       Placeholder="Time Event Starts"/>
-            <Entry x:Name="EventEndTime"
-                       Placeholder="Time Event Ends"/>
+                       Placeholder="Longitude of Event"/>
+            <DatePicker x:Name="EventDate"/>
+            <TimePicker x:Name="EventStartTime"/>
+            <TimePicker x:Name="EventEndTime"/>
 
             <Button x:Name="CreateEvent"
                     Text="Create Event"
                     HorizontalOptions="Center"
                     Clicked="CreateEvent_Clicked"/>
-
-            <ActivityIndicator x:Name="Loader" IsVisible="False" IsRunning = "True"/>
 
         </StackLayout>
     </ContentPage.Content>
