@@ -61,6 +61,8 @@
                 <TapGestureRecognizer Tapped="LoginButton_Clicked" NumberOfTapsRequired="1"/>
             </Label.GestureRecognizers>
         </Label>
+
     </StackLayout>
+
 
 </ContentPage>
