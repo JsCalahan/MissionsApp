@@ -21,12 +21,14 @@ namespace MissionsApp1.Pages
       
             base.OnAppearing();
 
+            this.EventsListView.IsRefreshing = true;
             DateTime yesterday = DateTime.Now.AddDays(-1);
             List<Mission> missionDatabase = await GlobalConfig.MobileService.GetTable<Mission>().Where(rec => rec.Date >= yesterday).ToListAsync();
             this.Missions = new ObservableCollection<Mission>(missionDatabase);
             allMissions = missionDatabase;
 
             this.EventsListView.ItemsSource = this.Missions;
+            this.EventsListView.IsRefreshing = false;
         }
         public EventsPage()
         {

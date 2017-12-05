@@ -13,6 +13,9 @@
             <Button x:Name="Login"
                     Text="Login"
                     Clicked="Login_Clicked"/>
+
+            <ActivityIndicator x:Name="Loader" IsVisible="False" IsRunning = "True"/>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

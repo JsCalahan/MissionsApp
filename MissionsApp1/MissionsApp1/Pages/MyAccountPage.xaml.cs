@@ -19,6 +19,8 @@ namespace MissionsApp1.Pages
         {
             base.OnAppearing();
 
+            this.UserEventListView.IsRefreshing = true;
+
             //making a new list to hold missions user is participating in
             List<Mission> myEvents = new List<Mission>();
             if (GlobalConfig.isOrganization == false)
@@ -38,6 +40,7 @@ namespace MissionsApp1.Pages
                 List<Mission> orgMissions = await GlobalConfig.MobileService.GetTable<Mission>().Where(rec => rec.OrganizationName == GlobalConfig.currentUser.FirstName).ToListAsync();
                 UserEventListView.ItemsSource = orgMissions;
             }
+            this.UserEventListView.IsRefreshing = false;
         }
 
         public ObservableCollection<string> Missions; 

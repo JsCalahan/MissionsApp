@@ -20,6 +20,9 @@ namespace MissionsApp1.Pages
 
         private async void CreateEvent_Clicked(object sender, EventArgs e)
         {
+            CreateEvent.IsVisible = false;
+            Loader.IsVisible = true;
+
             Mission mission = new Mission();
 
             mission.Name = EventName.Text;
@@ -28,8 +31,8 @@ namespace MissionsApp1.Pages
             mission.City = EventCity.Text;
             mission.State = EventState.Text;
             mission.ZipCode = EventZipCode.Text;
-            mission.Latitude = Convert.ToDouble(EventLatitude.Text);
-            mission.Longitude = Convert.ToDouble(EventLongitude.Text);
+            mission.Latitude = 0;
+            mission.Longitude = 0;
             mission.Date = Convert.ToDateTime(EventDate.Text);
             mission.StartTime = EventStartTime.Text;
             mission.EndTime = EventEndTime.Text;

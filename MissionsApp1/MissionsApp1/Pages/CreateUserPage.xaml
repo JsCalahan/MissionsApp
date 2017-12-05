@@ -26,6 +26,8 @@
                         Text="Create Account"
                         Clicked="CreateUserAccount_Clicked"/>
 
+                <ActivityIndicator x:Name="Loader" IsVisible="False" IsRunning = "True"/>
+
 
             </StackLayout>
         </ScrollView>

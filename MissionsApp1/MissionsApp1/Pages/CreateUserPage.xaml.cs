@@ -20,6 +20,9 @@ namespace MissionsApp1.Pages
 
         private async void CreateUserAccount_Clicked(object sender, EventArgs e)
         {
+            CreateUserAccount.IsVisible = false;
+            Loader.IsVisible = true;
+
             User user = new User();
 
             user.Username = UsernameEntry.Text;

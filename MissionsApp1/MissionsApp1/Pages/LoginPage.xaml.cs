@@ -20,6 +20,9 @@ namespace MissionsApp1.Pages
 
         private async void Login_Clicked(object sender, EventArgs e)
         {
+            Login.IsVisible = false;
+            Loader.IsVisible = true;
+
             List<User> users = await GlobalConfig.MobileService.GetTable<User>().Where(rec=>rec.Username==Username.Text&&rec.Password==Password.Text).ToListAsync();
             if(users.Count==1)
             {
