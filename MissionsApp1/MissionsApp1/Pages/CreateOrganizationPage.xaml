@@ -34,6 +34,8 @@
                         Text="Create Account"
                         Clicked="CreateOrganizationAccount_Clicked"/>
 
+                <ActivityIndicator x:Name="Loader" IsVisible="False" IsRunning = "True"/>
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

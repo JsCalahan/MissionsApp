@@ -20,6 +20,9 @@ namespace MissionsApp1.Pages
 
         private async void CreateOrganizationAccount_Clicked(object sender, EventArgs e)
         {
+            CreateOrganizationAccount.IsVisible = false;
+            Loader.IsVisible = true;
+
             User user = new User();
             Organization organization = new Organization();
 
@@ -44,6 +47,8 @@ namespace MissionsApp1.Pages
             await GlobalConfig.MobileService.GetTable<User>().InsertAsync(user);
             await GlobalConfig.MobileService.GetTable<Organization>().InsertAsync(organization);
             GlobalConfig.currentUser = user;
+            Settings.UserData = user;
+            Settings.isOrganization = true;
             GlobalConfig.isOrganization = true;
 
             UsernameEntry.Text = "";

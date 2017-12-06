@@ -41,6 +41,8 @@ namespace MissionsApp1.Pages
             EmailEntry.Text = "";
 
             GlobalConfig.currentUser = user;
+            Settings.UserData = user;
+            Settings.isOrganization = false;
 
             await Navigation.PushAsync(new HomePage());
         }
