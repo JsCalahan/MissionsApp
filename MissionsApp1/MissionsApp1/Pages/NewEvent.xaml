@@ -3,12 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MissionsApp1.Pages.NewEvent">
 
-    <ContentPage.Content BackgroundColor="#e2f0d9">
-        <StackLayout>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#e2f0d9">
 
             <Label Text="Create a New Event"
                    Font="24"
-                   TextColor="AliceBlue"/>
+                   TextColor="DarkBlue"/>
 
             <Entry x:Name="EventName"
                        Placeholder="Event Name"/>
@@ -32,6 +32,9 @@
                     Text="Create Event"
                     HorizontalOptions="Center"
                     Clicked="CreateEvent_Clicked"/>
+            
+                        <ActivityIndicator x:Name="Loader" IsVisible="False" IsRunning = "True"/>
+            
 
         </StackLayout>
     </ContentPage.Content>
